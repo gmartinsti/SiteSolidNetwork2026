@@ -1,0 +1,223 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 255 70% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 255 70% 55%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 255 70% 55%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+
+  h6 {
+    @apply text-base md:text-lg;
+  }
+}
+
+@layer components {
+  .underline-animation {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .dropdown-menu {
+    @apply absolute left-0 top-full mt-0 w-48 origin-top scale-95 rounded-md border border-gray-100 bg-white p-2 shadow-lg opacity-0 invisible transition-all duration-200 ease-in-out;
+  }
+  
+  .dropdown-open {
+    @apply scale-100 opacity-100 visible;
+  }
+
+  .primary-gradient {
+    @apply bg-gradient-to-r from-solidPurple-600 to-solidBlue-DEFAULT;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-solidPurple-600 px-4 py-2 text-sm font-medium text-white shadow transition-all hover:bg-solidPurple-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-solidPurple-400 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border border-solidPurple-200 bg-white px-4 py-2 text-sm font-medium text-solidPurple-700 shadow-sm transition-all hover:bg-solidPurple-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-solidPurple-400 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+  
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-md border border-gray-200 bg-transparent px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+  
+  .feature-card {
+    @apply rounded-lg border border-gray-100 bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-md;
+  }
+  
+  .feature-icon {
+    @apply mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-solidPurple-100 text-solidPurple-600;
+  }
+}
+
+/* Header: operational readout, scoped so the rest of the site keeps its type. */
+.sn-header,
+.sn-chat,
+.sn-page {
+  --sn-chassis: #120c2e;
+  --sn-signal: #2ee6a6;
+  --sn-ink: #16122b;
+  --sn-paper: #f7f6fb;
+  --sn-line: #e6e1f2;
+  font-family: Manrope, sans-serif;
+}
+
+.sn-chat-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #d4cde6 transparent;
+}
+
+.sn-chat-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sn-chat-scroll::-webkit-scrollbar-thumb {
+  background: #d4cde6;
+  border-radius: 999px;
+}
+
+.sn-status {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+.sn-led {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--sn-signal, #2ee6a6);
+  box-shadow: 0 0 0 0 rgba(46, 230, 166, 0.55);
+  animation: sn-led 2.6s ease-out infinite;
+}
+
+@keyframes sn-led {
+  0% { box-shadow: 0 0 0 0 rgba(46, 230, 166, 0.55); }
+  70% { box-shadow: 0 0 0 7px rgba(46, 230, 166, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 230, 166, 0); }
+}
+
+.sn-float {
+  animation: sn-float 7s ease-in-out infinite;
+}
+
+@keyframes sn-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sn-led { animation: none; }
+  .sn-float { animation: none; }
+}
