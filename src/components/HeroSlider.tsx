@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, PlayCircle, Shield, Key, BadgeCheck } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
-import SiteOverviewVideoDialog from "./SiteOverviewVideoDialog";
+import { useVideoModal } from "@/context/VideoModalContext";
 
 interface SlideProps {
   title: string;
@@ -99,7 +99,7 @@ const slides: SlideProps[] = [
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [videoPlaying, setVideoPlaying] = useState(false);
-  const [overviewDialogOpen, setOverviewDialogOpen] = useState(false);
+  const { openVideo } = useVideoModal();
   const intervalRef = useRef<number | null>(null);
 
   const nextSlide = () => {
@@ -152,10 +152,6 @@ const HeroSlider = () => {
 
   return (
     <section className="relative h-[calc(50vh)] w-full overflow-hidden">
-      <SiteOverviewVideoDialog
-        open={overviewDialogOpen}
-        onOpenChange={setOverviewDialogOpen}
-      />
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -197,7 +193,7 @@ const HeroSlider = () => {
                     className="relative w-full aspect-video group"
                     type="button"
                     aria-label="Assistir vídeo amplo"
-                    onClick={() => setOverviewDialogOpen(true)}
+                    onClick={() => openVideo()}
                   >
                     <img 
                       src={slide.videoThumbnail || slide.mediaSrc}

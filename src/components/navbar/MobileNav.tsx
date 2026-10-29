@@ -1,6 +1,7 @@
 import { HeartPulse, Code, Cloud, Package, User, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import MobileNavItem from './MobileNavItem';
+import HeaderVideoButton from './HeaderVideoButton';
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -21,10 +22,6 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
     { to: "/cloud/dbaas", label: "DBaaS" },
     { to: "/cloud/infracloud", label: "Gestão InfraCloud" },
     { to: "/cloud/virtual-server", label: "Servidor Virtual" },
-    { to: "/solidskye", label: "Backup" },
-    { to: "/solidskye/solucoes", label: "Soluções de Backup" },
-    { to: "/solidskye/armazenamento", label: "Armazenamento" },
-    { to: "/solidskye/integracoes", label: "Integrações" },
     { to: "/servicos/dba/sql-server", label: "DBA" },
     { to: "/servicos/dba/sql-server", label: "SQL Server" },
     { to: "/servicos", label: "Serviços" },
@@ -59,6 +56,8 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
           subItems={productsItems}
           onClick={onClose}
         />
+
+        <HeaderVideoButton variant="menu" onActivate={onClose} />
 
         <a
           href="https://atendimento.solidnetwork.com.br/portal/pt-br/home"

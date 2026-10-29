@@ -217,7 +217,94 @@
   50% { transform: translateY(-7px); }
 }
 
+.sn-video-trigger {
+  position: relative;
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sn-video-trigger-sm {
+  width: 34px;
+  height: 34px;
+}
+
+.sn-video-core {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(145deg, #2b1a6b 0%, #120c2e 100%);
+  box-shadow: 0 0 0 2px #fff, 0 0 16px rgba(46, 230, 166, 0.35);
+  animation: sn-video-glow 2.2s ease-in-out infinite;
+}
+
+.sn-video-trigger-sm .sn-video-core {
+  width: 30px;
+  height: 30px;
+}
+
+.sn-video-play {
+  margin-left: 2px;
+  animation: sn-video-play 1.8s ease-in-out infinite;
+}
+
+.sn-video-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 2px solid rgba(46, 230, 166, 0.7);
+  animation: sn-video-ring 2.1s ease-out infinite;
+}
+
+.sn-video-ring-delay {
+  animation-delay: 1.05s;
+}
+
+.sn-video-shine {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 38%;
+  height: 140%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.38), transparent);
+  animation: sn-video-shine 2.8s ease-in-out infinite;
+}
+
+@keyframes sn-video-ring {
+  0% { transform: scale(0.85); opacity: 0.7; }
+  100% { transform: scale(1.85); opacity: 0; }
+}
+
+@keyframes sn-video-glow {
+  0%, 100% { box-shadow: 0 0 0 2px #fff, 0 0 10px rgba(46, 230, 166, 0.28); }
+  50% { box-shadow: 0 0 0 2px #fff, 0 0 22px 4px rgba(46, 230, 166, 0.55); }
+}
+
+@keyframes sn-video-play {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.14); }
+}
+
+@keyframes sn-video-shine {
+  0% { transform: translateX(-140%) rotate(18deg); }
+  100% { transform: translateX(260%) rotate(18deg); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .sn-led { animation: none; }
   .sn-float { animation: none; }
+  .sn-video-core,
+  .sn-video-play,
+  .sn-video-ring,
+  .sn-video-shine { animation: none; }
 }

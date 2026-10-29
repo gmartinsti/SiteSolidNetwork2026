@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X, User, MessageSquare, Phone, Mail } from 'lucide-react';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
+import HeaderVideoButton from './HeaderVideoButton';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -75,6 +76,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-2">
+            <HeaderVideoButton />
             <a
               href="https://atendimento.solidnetwork.com.br/portal/pt-br/home"
               target="_blank"
