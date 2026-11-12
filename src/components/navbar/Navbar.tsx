@@ -76,7 +76,7 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             <HeaderVideoButton />
             <a
-              href="https://atendimento.solidnetwork.com.br/portal/pt-br/home"
+              href="https://solidup.solidnetwork.com.br/portal/"
               target="_blank"
               rel="noreferrer"
               className="hidden items-center rounded-md px-3 py-2 text-sm font-medium text-solidPurple-800 transition-colors hover:bg-solidPurple-50 hover:text-solidPurple-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-solidPurple-400 lg:inline-flex"

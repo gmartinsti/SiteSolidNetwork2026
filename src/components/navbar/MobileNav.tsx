@@ -52,7 +52,7 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
         <HeaderVideoButton variant="menu" onActivate={onClose} />
 
         <a
-          href="https://atendimento.solidnetwork.com.br/portal/pt-br/home"
+          href="https://solidup.solidnetwork.com.br/portal/"
           target="_blank"
           rel="noreferrer"
           className="mt-3 inline-flex items-center justify-center rounded-md border border-solidPurple-200 px-4 py-3 text-sm font-medium text-solidPurple-800"
