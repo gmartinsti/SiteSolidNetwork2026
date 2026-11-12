@@ -10,7 +10,11 @@ const Index = () => {
   const { openVideo } = useVideoModal();
 
   useEffect(() => {
-    openVideo();
+    const timer = window.setTimeout(() => {
+      openVideo();
+    }, 15_000);
+
+    return () => window.clearTimeout(timer);
   }, [openVideo]);
 
   return (
