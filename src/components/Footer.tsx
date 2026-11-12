@@ -5,7 +5,6 @@ import { siteEmail, siteEmailHref, sitePhones } from "@/lib/contact";
 const company = [
   { to: "/nexciclo", label: "Quem Somos" },
   { to: "/nexciclo", label: BRAND_LOCKUP },
-  { to: "/portfolio", label: "Portfólio" },
   { to: "/blog", label: "Blog" },
   { to: "/contato", label: "Contato" },
 ];

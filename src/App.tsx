@@ -21,7 +21,6 @@ import SolidSkyeBackupService from "./pages/services/SolidSkyeBackupService";
 import DbaServices from "./pages/services/DbaServices";
 import TypeTalk from "./pages/TypeTalk";
 import TypeTalkFeatures from "./pages/TypeTalkFeatures";
-import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import SolidSkye from "./pages/SolidSkye";
 import Solucoes from "./pages/solidskye/Solucoes";
@@ -53,7 +52,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/planos" element={<Planos />} />
             <Route path="/contato" element={<Contato />} />
-            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/solid-dns" element={<SolidDNS />} />
             <Route path="/agendamento" element={<Agendamento />} />
