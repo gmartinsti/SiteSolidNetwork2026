@@ -131,7 +131,7 @@ const testimonials = [
     name: "Rafael Costa",
     role: "Gerente de Marketing, VitaStore",
     quote:
-      "A integração entre WhatsApp e nossa loja virtual trouxe um aumento de 40% nas vendas. O suporte da Solid Network foi excepcional.",
+      "A integração entre WhatsApp e nossa loja virtual trouxe um aumento de 40% nas vendas. O suporte da Solid Network | NexCiclo foi excepcional.",
     gradient: "from-emerald-600 to-emerald-400",
   },
 ];

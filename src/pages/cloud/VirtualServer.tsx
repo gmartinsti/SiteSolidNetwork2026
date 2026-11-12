@@ -128,7 +128,7 @@ const VirtualServer = () => {
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-200 max-w-xl">
-                  Infraestrutura virtual de alto desempenho da Solid Network com recursos dedicados,
+                  Infraestrutura virtual de alto desempenho da Solid Network | NexCiclo com recursos dedicados,
                   escalabilidade instantânea e suporte especializado 24x7.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
@@ -208,7 +208,7 @@ const VirtualServer = () => {
                   Performance e confiabilidade para suas aplicações
                 </h2>
                 <p className="mt-4 text-slate-600 md:text-lg">
-                  Servidores virtuais Solid Network entregam o equilíbrio perfeito entre desempenho, segurança
+                  Servidores virtuais Solid Network | NexCiclo entregam o equilíbrio perfeito entre desempenho, segurança
                   e custo, com suporte de quem entende de infraestrutura.
                 </p>
                 <Link to="/contato" className="inline-block mt-6">
@@ -266,7 +266,7 @@ const VirtualServer = () => {
               Pronto para subir seu servidor virtual?
             </h2>
             <p className="md:text-xl text-cyan-100 mb-8">
-              Fale com um especialista da Solid Network e monte a infraestrutura ideal para o seu projeto em minutos.
+              Fale com um especialista da Solid Network | NexCiclo e monte a infraestrutura ideal para o seu projeto em minutos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contato">

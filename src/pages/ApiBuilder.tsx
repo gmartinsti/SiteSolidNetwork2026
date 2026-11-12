@@ -160,7 +160,7 @@ const ApiBuilder = () => {
                   suas integrações em qualquer ambiente
                 </h2>
                 <p className="text-gray-600 text-lg">
-                  Disponível em <strong>Cloud gerenciada</strong> pela SolidNetwork ou <strong>On-premise</strong>
+                  Disponível em <strong>Cloud gerenciada</strong> pela Solid Network | NexCiclo ou <strong>On-premise</strong>
                   dentro da sua infraestrutura, com governança ponta a ponta.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -200,7 +200,7 @@ Authorization: Bearer ••••
 Content-Type: application/json
 
 {
-  "nome": "Solid Network",
+  "nome": "Solid Network | NexCiclo",
   "email": "contato@solidnetwork.com.br",
   "plano": "enterprise"
 }

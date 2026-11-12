@@ -7,11 +7,11 @@ const BrandLockup = () => {
       <Link
         to="/"
         className="rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2EE6A6] focus-visible:ring-offset-2"
-        aria-label="Solid Network — Início"
+        aria-label={`${BRAND_LOCKUP} — Início`}
       >
         <img
           src={solidnetworkLogo("light")}
-          alt="Solid Network"
+          alt={BRAND_LOCKUP}
           className="h-20 w-auto max-w-[240px] object-contain object-left sm:max-w-none md:h-[6.5rem]"
         />
       </Link>

@@ -47,7 +47,7 @@ const specialties = [
   {
     title: "Transformação digital e IA",
     description:
-      "Modernização da operação de saúde integrada à infraestrutura, integrações e cloud SolidNetwork.",
+      "Modernização da operação de saúde integrada à infraestrutura, integrações e cloud Solid Network | NexCiclo.",
     icon: Sparkles,
   },
 ];

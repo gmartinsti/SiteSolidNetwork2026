@@ -332,7 +332,7 @@ const SitesAssinatura = () => {
           <div className="container px-4 md:px-6">
             <div className="text-center mb-10">
               <h2 className="text-3xl font-bold">Por que escolher nossos Sites por Assinatura?</h2>
-              <p className="mt-4 text-lg text-gray-600">Diferenciais que fazem a Solid Network ser referência em sites para a área da saúde</p>
+              <p className="mt-4 text-lg text-gray-600">Diferenciais que fazem a Solid Network | NexCiclo ser referência em sites para a área da saúde</p>
             </div>
             
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">

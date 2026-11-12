@@ -1,4 +1,5 @@
 import React from 'react';
+import { BRAND_LOCKUP } from '@/lib/brandLogos';
 
 interface ChatMessagesProps {
   step: number;
@@ -16,7 +17,7 @@ const ChatMessages = ({ step }: ChatMessagesProps) => {
   return (
     <div className="sn-chat-scroll max-h-64 overflow-y-auto bg-[#EFEBF8] px-4 py-4">
       <BotBubble>
-        Olá. Sou a <span className="font-semibold">SOL</span>, da Solid Network. Posso te indicar o produto certo.
+        Olá. Sou a <span className="font-semibold">SOL</span>, da {BRAND_LOCKUP}. Posso te indicar o produto certo.
       </BotBubble>
 
       <BotBubble>

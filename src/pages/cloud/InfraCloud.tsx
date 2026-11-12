@@ -128,7 +128,7 @@ const InfraCloud = () => {
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-200 max-w-xl">
-                  A Solid Network projeta, opera e otimiza sua infraestrutura multi-cloud com foco em
+                  A Solid Network | NexCiclo projeta, opera e otimiza sua infraestrutura multi-cloud com foco em
                   disponibilidade, segurança e redução de custos.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
@@ -266,7 +266,7 @@ const InfraCloud = () => {
               Pronto para colocar sua nuvem nas melhores mãos?
             </h2>
             <p className="md:text-xl text-indigo-100 mb-8">
-              Fale com um especialista da Solid Network e descubra como a Gestão InfraCloud pode reduzir custos
+              Fale com um especialista da Solid Network | NexCiclo e descubra como a Gestão InfraCloud pode reduzir custos
               e elevar a disponibilidade do seu ambiente.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

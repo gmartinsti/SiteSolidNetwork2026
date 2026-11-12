@@ -30,7 +30,7 @@ const Footer = () => {
             >
               <img
                 src={solidnetworkLogo("dark")}
-                alt="Solid Network"
+                alt={BRAND_LOCKUP}
                 className="h-20 w-auto object-contain md:h-28"
               />
             </Link>

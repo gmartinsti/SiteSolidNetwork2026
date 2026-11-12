@@ -1,7 +1,7 @@
 export type BrandSurface = "light" | "dark";
 
 /** Nome institucional unificado em textos e UI */
-export const BRAND_LOCKUP = "SolidNetwork | NexCiclo";
+export const BRAND_LOCKUP = "Solid Network | NexCiclo";
 
 /**
  * Logo variants by background tone:

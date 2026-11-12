@@ -110,7 +110,7 @@ const PricingSection = () => {
           </h2>
           <p className="mt-4 max-w-[700px] text-slate-600 md:text-lg">
             Escolha o melhor plano para sua empresa e transforme o seu atendimento digital
-            por WhatsApp e Direct com a SolidNetwork.
+            por WhatsApp e Direct com a Solid Network | NexCiclo.
           </p>
         </div>
 

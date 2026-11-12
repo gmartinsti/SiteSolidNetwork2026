@@ -131,7 +131,7 @@ const Node4Health = () => {
                 </h2>
                 <p className="text-gray-600 text-lg">
                   Modelagem visual, versionamento, autenticação, monitoramento e documentação automática.
-                  Disponível em <strong>Cloud gerenciada</strong> pela SolidNetwork ou <strong>On-premise</strong>
+                  Disponível em <strong>Cloud gerenciada</strong> pela Solid Network | NexCiclo ou <strong>On-premise</strong>
                   dentro da sua infraestrutura.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">

@@ -144,7 +144,7 @@ const DBaaS = () => {
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-200 max-w-xl">
-                  O DBaaS da Solid Network entrega alta disponibilidade, performance e segurança
+                  O DBaaS da Solid Network | NexCiclo entrega alta disponibilidade, performance e segurança
                   para seu SQL Server, para que seu time foque no que importa: o seu produto.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
@@ -308,7 +308,7 @@ const DBaaS = () => {
               Pronto para deixar seu SQL Server nas melhores mãos?
             </h2>
             <p className="md:text-xl text-blue-100 mb-8">
-              Fale agora com um especialista da Solid Network e descubra como o DBaaS para SQL Server pode reduzir
+              Fale agora com um especialista da Solid Network | NexCiclo e descubra como o DBaaS para SQL Server pode reduzir
               custos e aumentar a confiabilidade da sua operação.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -75,7 +75,7 @@ const slides: Slide[] = [
         O <strong className="text-white">API Builder</strong> é o módulo do SolidFlow para{" "}
         <strong className="text-white">modelar, versionar, publicar e monitorar APIs</strong> com governança total.
         <br />
-        Use em <strong className="text-white">Cloud gerenciada</strong> pela SolidNetwork ou{" "}
+        Use em <strong className="text-white">Cloud gerenciada</strong> pela Solid Network | NexCiclo ou{" "}
         <strong className="text-white">On-premise</strong> dentro da sua infraestrutura.
       </>
     ),
