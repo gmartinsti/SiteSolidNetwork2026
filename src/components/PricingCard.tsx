@@ -11,7 +11,7 @@ interface PricingCardProps {
   tag?: ReactNode;
 }
 
-const whatsappNumber = "5531983177452";
+const whatsappNumber = "5531991511427";
 
 const PricingCard = ({
   title,

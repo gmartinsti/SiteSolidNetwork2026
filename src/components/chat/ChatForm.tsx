@@ -21,7 +21,7 @@ const ChatForm = ({ onSubmit, onStart }: ChatFormProps) => {
     name: '',
     phone: '',
     email: '',
-    product: 'SolidSkye'
+    product: 'Solid DNS'
   });
   
   const [step, setStep] = useState(0);
@@ -92,7 +92,6 @@ const ChatForm = ({ onSubmit, onStart }: ChatFormProps) => {
 
   // List of products
   const products = [
-    'SolidSkye', 
     'Solid DNS', 
     'Tráfego Pago', 
     'Gestão Smart', 

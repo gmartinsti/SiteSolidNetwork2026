@@ -36,6 +36,8 @@ import SitesAssinatura from "./pages/SitesAssinatura";
 import CertificadoDigital from "./pages/CertificadoDigital";
 import Node4Health from "./pages/Node4Health";
 import ApiBuilder from "./pages/ApiBuilder";
+import NexCiclo from "./pages/NexCiclo";
+import ZeroDox from "./pages/ZeroDox";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +62,8 @@ const App = () => (
             <Route path="/solidflow" element={<Node4Health />} />
             <Route path="/node4health" element={<Node4Health />} />
             <Route path="/api-builder" element={<ApiBuilder />} />
+            <Route path="/nexciclo" element={<NexCiclo />} />
+            <Route path="/zerodox" element={<ZeroDox />} />
             
             {/* TypeTalk routes */}
             <Route path="/type-talk" element={<TypeTalk />} />

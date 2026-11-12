@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -17,18 +16,14 @@ const Index = () => {
   return (
     <div className="sn-page min-h-screen flex flex-col bg-[#F7F6FB]">
       <Navbar />
-      
+
       <main className="flex-1">
-        {/* Node4Health Banner - principal */}
         <Node4HealthBanner />
-        
-        {/* Contact Section */}
         <ContactSection />
       </main>
-      
+
       <Footer />
-      
-      {/* WhatsApp Floating Button */}
+
       <WhatsAppFloatingButton />
     </div>
   );

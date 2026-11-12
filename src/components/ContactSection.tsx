@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
+import { siteEmail, siteEmailHref, sitePhones } from "@/lib/contact";
 
 const contacts = [
   { label: "Cidade", value: "Belo Horizonte, MG" },
-  { label: "Telefone", value: "(31) 98317-7452", href: "tel:+5531983177452" },
-  { label: "E-mail", value: "comercial@solidnetwork.com.br", href: "mailto:comercial@solidnetwork.com.br" },
+  ...sitePhones.map((phone, index) => ({
+    label: index === 0 ? "Telefone" : "Telefone 2",
+    value: phone.display,
+    href: phone.tel,
+  })),
+  { label: "E-mail", value: siteEmail, href: siteEmailHref },
 ];
 
 const ContactSection = () => {
@@ -37,7 +42,7 @@ const ContactSection = () => {
 
         <dl className="divide-y divide-[#E6E1F2] border-y border-[#E6E1F2]">
           {contacts.map((item) => (
-            <div key={item.label} className="grid grid-cols-[7rem_1fr] items-baseline gap-4 py-4">
+            <div key={`${item.label}-${item.value}`} className="grid grid-cols-[7rem_1fr] items-baseline gap-4 py-4">
               <dt className="sn-status text-[11px] tracking-[0.14em] text-[#120C2E]/45">{item.label}</dt>
               <dd className="text-sm font-semibold text-[#16122B]">
                 {item.href ? (

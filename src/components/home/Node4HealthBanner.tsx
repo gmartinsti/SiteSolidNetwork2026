@@ -15,8 +15,15 @@ import {
   Zap,
   ChevronLeft,
   ChevronRight,
+  FileScan,
+  TabletSmartphone,
+  ScanLine,
+  PenLine,
+  Send,
+  FileSignature,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BRAND_LOCKUP } from "@/lib/brandLogos";
 
 type Slide = {
   badge: string;
@@ -83,6 +90,33 @@ const slides: Slide[] = [
       { icon: Boxes, label: "Integração com ERPs e SaaS" },
     ],
   },
+  {
+    badge: "ZeroDox · Eficiência digital para saúde",
+    titleParts: [
+      { text: "Gestão documental", tone: "muted" },
+      { text: "e ciclo da receita", tone: "white" },
+      { text: "com", tone: "muted" },
+      { text: "validade jurídica", tone: "gradient" },
+    ],
+    description: (
+      <>
+        Conheça os produtos <strong className="text-white">ZeroDox</strong>: digitalização, recepção sem papel,
+        assinatura e tramitação eletrônica para acelerar a operação em saúde.
+        <br />
+        <strong className="text-white">Menos é mais, zero é tudo</strong> — no ecossistema {BRAND_LOCKUP}.
+      </>
+    ),
+    primaryCta: { label: "Conhecer ZeroDox", to: "/zerodox" },
+    secondaryCta: { label: "Saúde Digital", to: "/nexciclo" },
+    chips: [
+      { icon: FileScan, label: "X-SAME" },
+      { icon: TabletSmartphone, label: "Recept-I" },
+      { icon: ScanLine, label: "DoxCapture" },
+      { icon: Send, label: "Dox-Send" },
+      { icon: PenLine, label: "Sign" },
+      { icon: FileSignature, label: "Contract-I" },
+    ],
+  },
 ];
 
 const chipSpots = [
@@ -116,7 +150,9 @@ const Node4HealthBanner = () => {
           background:
             current === 0
               ? "radial-gradient(55% 60% at 15% 10%, rgba(124,58,237,0.40) 0%, transparent 60%), radial-gradient(50% 55% at 90% 90%, rgba(93,138,247,0.35) 0%, transparent 60%)"
-              : "radial-gradient(55% 60% at 85% 15%, rgba(37,99,235,0.40) 0%, transparent 60%), radial-gradient(50% 55% at 10% 85%, rgba(168,85,247,0.35) 0%, transparent 60%)",
+              : current === 1
+              ? "radial-gradient(55% 60% at 85% 15%, rgba(37,99,235,0.40) 0%, transparent 60%), radial-gradient(50% 55% at 10% 85%, rgba(168,85,247,0.35) 0%, transparent 60%)"
+              : "radial-gradient(55% 60% at 20% 20%, rgba(0,210,255,0.28) 0%, transparent 60%), radial-gradient(50% 55% at 90% 80%, rgba(46,230,166,0.18) 0%, transparent 60%)",
         }}
       />
       <div className="absolute inset-0 opacity-[0.15] [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:32px_32px]" />

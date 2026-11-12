@@ -14,5 +14,5 @@ export const openWhatsAppChat = (formData: FormData): void => {
   const message = formatWhatsAppMessage(formData);
   
   // Open WhatsApp with the pre-filled message
-  window.open(`https://wa.me/5531983177452?text=${encodeURIComponent(message)}`, '_blank');
+  window.open(`https://wa.me/5531991511427?text=${encodeURIComponent(message)}`, '_blank');
 };

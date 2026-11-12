@@ -20,12 +20,6 @@ const solutions: Solution[] = [
     link: "/type-talk"
   },
   {
-    title: "SolidSkye Backup",
-    description: "Backup em nuvem com proteção contra ransomware",
-    image: "/lovable-uploads/bda71f33-aeab-4a71-a901-ae809e24d11a.png",
-    link: "/solidskye"
-  },
-  {
     title: "Sites por Assinatura",
     description: "Sites profissionais com entrega em até 7 dias",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",

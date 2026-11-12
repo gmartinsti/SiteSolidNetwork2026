@@ -51,17 +51,6 @@ const slides: SlideProps[] = [
     color: "bg-gradient-to-r from-blue-600 to-emerald-500"
   },
   {
-    title: "SolidSkye Backup",
-    subtitle: "Backup em nuvem",
-    description: "Proteja os dados da sua empresa com nossa solução de backup em nuvem segura e confiável, com proteção contra ransomware",
-    ctaText: "Conheça o SolidSkye",
-    ctaLink: "/solidskye",
-    mediaType: 'video',
-    mediaSrc: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    videoThumbnail: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    color: "bg-gradient-to-r from-blue-600 to-cyan-500"
-  },
-  {
     title: "Desenvolvimento Web",
     subtitle: "Sites profissionais",
     description: "Criamos sites responsivos e otimizados para SEO que convertem visitantes em clientes, com hospedagem e e-mail incluídos",

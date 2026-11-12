@@ -11,6 +11,7 @@ import { sendWebhook } from "@/utils/webhook";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
+import { primaryPhone, siteEmail, siteEmailHref, sitePhones } from "@/lib/contact";
 
 const Contato = () => {
   const [formData, setFormData] = useState({
@@ -105,7 +106,7 @@ const Contato = () => {
                 Nossa equipe está pronta para entender seu desafio e propor a melhor solução em tecnologia, cloud e atendimento.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <a href="https://wa.me/5531983177452" target="_blank" rel="noopener noreferrer">
+                <a href={`https://wa.me/${primaryPhone.wa}`} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-gradient-to-r from-solidPurple-600 to-solidPurple-700 text-white hover:opacity-90">
                     <MessageSquare className="mr-2 h-4 w-4" /> Falar no WhatsApp
                   </Button>
@@ -123,11 +124,16 @@ const Contato = () => {
         {/* Quick info cards */}
         <section className="border-b border-gray-100 bg-gray-50/60 py-10">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { icon: Phone, label: 'Telefone', value: '(31) 98317-7452', href: 'tel:+5531983177452' },
-                { icon: Mail, label: 'Email', value: 'comercial@solidnetwork.com.br', href: 'mailto:comercial@solidnetwork.com.br' },
-                { icon: MapPin, label: 'Endereço', value: 'Belo Horizonte, MG' },
+                ...sitePhones.map((phone, index) => ({
+                  icon: Phone,
+                  label: index === 0 ? "Telefone" : "Telefone 2",
+                  value: phone.display,
+                  href: phone.tel,
+                })),
+                { icon: Mail, label: "Email", value: siteEmail, href: siteEmailHref },
+                { icon: MapPin, label: "Endereço", value: "Belo Horizonte, MG" as string, href: undefined as string | undefined },
               ].map(({ icon: Icon, label, value, href }) => {
                 const content = (
                   <div className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-solidPurple-200 hover:shadow-md">
@@ -141,9 +147,9 @@ const Contato = () => {
                   </div>
                 );
                 return href ? (
-                  <a key={label} href={href} className="block">{content}</a>
+                  <a key={`${label}-${value}`} href={href} className="block">{content}</a>
                 ) : (
-                  <div key={label}>{content}</div>
+                  <div key={`${label}-${value}`}>{content}</div>
                 );
               })}
             </div>
@@ -203,7 +209,7 @@ const Contato = () => {
                       <p className="mt-3 text-sm text-gray-600">
                         Já é cliente? Fale direto com nossa equipe de atendimento pelo WhatsApp.
                       </p>
-                      <a href="https://wa.me/5531983177452" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block">
+                      <a href={`https://wa.me/${primaryPhone.wa}`} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block">
                         <Button className="bg-emerald-500 text-white hover:bg-emerald-600">
                           <MessageSquare className="mr-2 h-4 w-4" /> Iniciar conversa
                         </Button>

@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, User, MessageSquare, Phone, Mail } from 'lucide-react';
+import BrandLockup from './BrandLockup';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 import HeaderVideoButton from './HeaderVideoButton';
+import { sitePhones } from '@/lib/contact';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,14 +33,19 @@ const Navbar = () => {
             </span>
           </div>
 
-          <div className="flex shrink-0 items-center gap-4 text-[12px] leading-none">
-            <a
-              href="tel:+5531983177452"
-              className="flex items-center gap-1.5 text-white/85 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
-            >
-              <Phone className="h-3.5 w-3.5" />
-              (31) 98317-7452
-            </a>
+          <div className="flex shrink-0 items-center gap-3 text-[12px] leading-none sm:gap-4">
+            {sitePhones.map((phone, index) => (
+              <a
+                key={phone.tel}
+                href={phone.tel}
+                className={`items-center gap-1.5 text-white/85 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 ${
+                  index === 0 ? "flex" : "hidden sm:flex"
+                }`}
+              >
+                {index === 0 ? <Phone className="h-3.5 w-3.5" /> : null}
+                {phone.display}
+              </a>
+            ))}
             <span className="hidden h-3 w-px bg-white/15 lg:block" aria-hidden="true" />
             <a
               href="mailto:comercial@solidnetwork.com.br"
@@ -57,20 +64,11 @@ const Navbar = () => {
         }`}
       >
         <div className="h-[2px] w-full bg-gradient-to-r from-solidPurple-700 via-solidBlue-DEFAULT to-teal-400" />
-        <div className="container flex h-[72px] items-center justify-between gap-4 px-4 md:px-6">
-          <div className="flex min-w-0 items-center gap-6 lg:gap-8">
-            <Link
-              to="/"
-              className="shrink-0 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2EE6A6] focus-visible:ring-offset-2"
-            >
-              <img
-                src="/lovable-uploads/ee2a951f-2e4d-4681-ab6b-be222874c0d0.png"
-                alt="Solid Network"
-                className="h-11 md:h-12"
-              />
-            </Link>
+        <div className="container flex h-[120px] items-center justify-between gap-4 px-4 md:px-6">
+          <div className="flex min-w-0 items-center gap-3 lg:gap-6">
+            <BrandLockup />
 
-            <span className="hidden h-8 w-px bg-[#E6E1F2] md:block" aria-hidden="true" />
+            <span className="hidden h-14 w-px bg-[#E6E1F2] lg:block" aria-hidden="true" />
 
             <DesktopNav />
           </div>
@@ -81,7 +79,7 @@ const Navbar = () => {
               href="https://atendimento.solidnetwork.com.br/portal/pt-br/home"
               target="_blank"
               rel="noreferrer"
-              className="hidden items-center rounded-md px-3 py-2 text-sm font-medium text-solidPurple-800 transition-colors hover:bg-solidPurple-50 hover:text-solidPurple-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-solidPurple-400 md:inline-flex"
+              className="hidden items-center rounded-md px-3 py-2 text-sm font-medium text-solidPurple-800 transition-colors hover:bg-solidPurple-50 hover:text-solidPurple-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-solidPurple-400 lg:inline-flex"
             >
               <User className="mr-2 h-4 w-4" />
               Área do Cliente
@@ -89,7 +87,7 @@ const Navbar = () => {
 
             <Link
               to="/contato"
-              className="hidden items-center justify-center rounded-md bg-[#1a1147] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#241a5e] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-solidPurple-400 focus-visible:ring-offset-2 md:inline-flex"
+              className="hidden items-center justify-center rounded-md bg-[#1a1147] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#241a5e] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-solidPurple-400 focus-visible:ring-offset-2 lg:inline-flex"
             >
               <MessageSquare className="mr-2 h-4 w-4" />
               Fale com um especialista
@@ -97,7 +95,7 @@ const Navbar = () => {
 
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-full p-2 text-[#120C2E] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2EE6A6] md:hidden"
+              className="inline-flex items-center justify-center rounded-full p-2 text-[#120C2E] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2EE6A6] lg:hidden"
               onClick={() => setIsMenuOpen((open) => !open)}
               aria-expanded={isMenuOpen}
               aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
